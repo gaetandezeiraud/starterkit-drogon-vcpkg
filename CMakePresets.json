@@ -2,7 +2,7 @@
   "version": 2,
   "configurePresets": [
     {
-      "name": "x64-Debug",
+      "name": "debug",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
@@ -11,7 +11,7 @@
       }
     },
     {
-      "name": "x64-Release",
+      "name": "release",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build-release",
       "cacheVariables": {
@@ -19,5 +19,17 @@
         "CMAKE_BUILD_TYPE": "Release"
       }
     }
+  ],
+  "buildPresets":
+  [
+    {
+      "name": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    }
   ]
+
 }

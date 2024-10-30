@@ -562,3 +562,5 @@ FodyWeavers.xsd
 
 .DS_Store
 build
+build-release
+build-debug
